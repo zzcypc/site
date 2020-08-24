@@ -1,0 +1,168 @@
+.wish {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ff2434;
+  transition: background-color 1s ease-in;
+  position: relative;
+}
+.gift {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+  .gift__top {
+    width: 120px;
+    margin: 0 auto;
+    transform-origin: bottom left;
+    transform: translateY(6px);
+  }
+  .bowknot {
+    height: 40px;
+    position: relative;
+
+    div {
+      width: 34px;
+      height: 34px;
+      border: solid 6px #fff;
+      border-radius: 50%;
+      position: absolute;
+    }
+    .bowknot__left {
+      border-bottom-right-radius: 0;
+      right: 50%;
+      transform: translateX(3px);
+    }
+    .bowknot__right {
+      border-bottom-left-radius: 0;
+      left: 50%;
+      transform: translateX(-3px);
+    }
+  }
+  .cover {
+    height: 10px;
+    margin: 0 auto;
+    border: solid 6px #fff;
+    border-radius: 6px;
+  }
+  .box {
+    width: 80px;
+    height: 60px;
+    margin: 0 auto;
+    border: solid 6px #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      width: 37px;
+      height: 27px;
+      border: solid 6px #fff;
+      position: absolute;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      border-top: none;
+      border-left: none;
+    }
+    &::after {
+      bottom: 0;
+      right: 0;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+}
+
+.wish-open {
+  background-color: #fff;
+  .gift__top {
+    animation: open 1s ease-in-out forwards;
+  }
+  .box {
+    animation: scale 1s ease-in-out forwards;
+  }
+  .greeting {
+    opacity: 1;
+  }
+}
+
+.greeting {
+  padding-top: 100px;
+  text-align: center;
+  font-family: fantasy, sans-serif;
+  opacity: 0;
+  transition: opacity 1s ease-in 1s;
+  h1 {
+    color: #ff2434;
+  }
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+  .picture {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    .balloon {
+      position: absolute;
+      transform-origin: bottom center;
+      animation: sway 2s ease-in-out infinite alternate;
+      &:nth-of-type(1) {
+        right: 100px;
+        top: 0;
+      }
+      &:nth-of-type(2) {
+        right: 60px;
+        bottom: 0;
+      }
+      &:nth-of-type(3) {
+        left: 100px;
+        top: 0;
+      }
+      &:nth-of-type(4) {
+        left: 80px;
+        bottom: 0;
+      }
+    }
+    .cake {
+      margin-top: 40px;
+      animation: shine 1s ease-in-out infinite alternate;
+    }
+  }
+}
+@keyframes scale {
+  50% {
+    transform: scale(1, 0.9);
+  }
+  100% {
+    transform: scale(1);
+    visibility: hidden;
+  }
+}
+
+@keyframes open {
+  to {
+    transform: rotateZ(-30deg);
+    visibility: hidden;
+  }
+}
+@keyframes sway {
+  from {
+    transform: rotateZ(10deg);
+  }
+  to {
+    transform: rotateZ(-10deg);
+  }
+}
+@keyframes shine {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.2);
+  }
+}
