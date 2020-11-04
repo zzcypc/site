@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST = (function(a){return {"/daily-quiz/20201102":[a],"/daily-quiz/20201103":[a],"/happy-birthday-to-yyl":["static\u002Fcss\u002Fe4e4177457e723da3df8.css"]}}("static\u002Fchunks\u002F020881a432dce1a902e6acfd17f1a153f809745b.dd4df2d5a0f44c5cbc65.js"));self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
