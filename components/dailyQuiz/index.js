@@ -20,7 +20,7 @@ const Quiz = (props) => {
         return (
           <Form.Item
             key={index}
-            label={zh}
+            label={`${index + 1}. ${zh}`}
             name={zh}
             rules={[
               {
