@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
     "animate.css": "^4.1.0",
     "antd": "^4.8.0",
     "classnames": "^2.2.6",
